@@ -1,7 +1,11 @@
+// HeapCtrl.h
+// For release and allocate heap memory
+
 #pragma once
 
 
 namespace heap_ctrl {
+	// Release heap memory
 	template <typename T>
 	void release(T** p) {
 		if (p) {
@@ -12,6 +16,7 @@ namespace heap_ctrl {
 		}
 	}
 
+	// Release 1 dimensional heap memory
 	template <typename T>
 	void releaseN(T** p) {
 		if (p) {
@@ -22,6 +27,8 @@ namespace heap_ctrl {
 		}
 	}
 
+	// Release 2 dimensional heap memory
+	// that is only allocated below
 	template <typename T>
 	void releaseMN(T*** p) {
 		if (p) {
@@ -33,6 +40,7 @@ namespace heap_ctrl {
 		}
 	}
 
+	// Allocate 2 dimensional heap memory
 	template <typename T>
 	T** allocate(int rows, int cols) {
 		T** p = new T * [rows];
