@@ -1,3 +1,6 @@
+// opencv_lib.hpp
+// For limk OpenCV libraries
+
 #pragma once
 
 #include <opencv2/core/version.hpp>
